@@ -18,7 +18,7 @@ def make_get_request(url, headers=None, params=None):
         return None, None
     
 # Example usage:
-url = "https://poetrydb.org/title/love/title,author.json"
+url = "https://poetrydb.org/title/I Have A Rendezvous With Death/title,linecount,lines.json"
 response, json_response = make_get_request(url)
 
 if response:
@@ -27,11 +27,11 @@ if response:
         print("JSON Response:", json.dumps(json_response, indent=4))
 
 #Example usage with query parameters
-url_with_params = "https://poetrydb.org/author/William Shakespear/title,linecount.json"
+#url_with_params = "https://poetrydb.org/author/William Shakespear/title,linecount.json"
 #params = {"postId":1}
-response_with_params, json_response_with_params = make_get_request(url_with_params) #, params=params
+#response_with_params, json_response_with_params = make_get_request(url_with_params) #, params=params
 
-if response_with_params:
-  print("Status Code with params:", response_with_params.status_code)
-  if json_response_with_params:
-    print("JSON Response with params:", json.dumps(json_response_with_params, indent=4))
+#if response_with_params:
+#  print("Status Code with params:", response_with_params.status_code)
+#  if json_response_with_params:
+#    print("JSON Response with params:", json.dumps(json_response_with_params, indent=4))
